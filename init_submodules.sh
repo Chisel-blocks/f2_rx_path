@@ -3,19 +3,20 @@
 DIR="$( cd "$( dirname $0 )" && pwd )"
 git submodule update --init
 
+#Rocket chip is huge. make it global
 #Publish local the ones you need
-cd $DIR/rocket-chip
-git submodule update --init firrtl
-git submodule update --init chisel3
-git submodule update --init hardfloat
-
-cd $DIR/rocket-chip/firrtl
-sbt publishLocal
-cd $DIR/rocket-chip/chisel3
-sbt publishLocal
-
-cd $DIR/rocket-chip
-sbt publishLocal
+#cd $DIR/rocket-chip
+#git submodule update --init firrtl
+#git submodule update --init chisel3
+#git submodule update --init hardfloat
+#
+#cd $DIR/rocket-chip/firrtl
+#sbt publishLocal
+#cd $DIR/rocket-chip/chisel3
+#sbt publishLocal
+#
+#cd $DIR/rocket-chip
+#sbt publishLocal
 
 SUBMODULES="\
     f2_decimator \
@@ -31,3 +32,4 @@ for module in $SUBMODULES; do
 done
 
 exit 0
+
