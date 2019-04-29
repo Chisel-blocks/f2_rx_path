@@ -225,17 +225,17 @@ class f2_rx_path (
     // we only need FP to handle gain, so input does not need ot be FP
     // Complex multiplication did not work as expected
     //w_weighted_users(i):=( userdelay(i).optr_Z * io.adc_ioctrl.user_weights(i) 
-    // Must extend the widths to the RESULT WIDTH before multiplication
+    // Must extend the widths by 1 before multiplication
     val w_weights=Seq.fill(users){
         // Integer part is just the sign
         Wire(DspComplex(
-            FixedPoint((n+weightbits).W,(weightbits-1).BP),
-            FixedPoint((weightbits).W,(weightbits-1).BP)
+            FixedPoint((weightbits+1).W,(weightbits-1).BP),
+            FixedPoint((weightbits+1).W,(weightbits-1).BP)
         ))
     }
     val w_delays=Seq.fill(users){
         // Sum of fractional bits must eventually equal weightbits after multiplication
-        Wire(DspComplex(FixedPoint((n+weightbits).W,1.BP),FixedPoint(n.W,1.BP)))
+        Wire(DspComplex(FixedPoint((n+1).W,1.BP),FixedPoint((n+1).W,1.BP)))
     }
 
     val w_weighted_users=Seq.fill(users){
