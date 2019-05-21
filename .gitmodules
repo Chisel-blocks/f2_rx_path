@@ -1,6 +1,6 @@
 [submodule "f2_decimator"]
 	path = f2_decimator
-	url = git@bwrcrepo.eecs.berkeley.edu:dsp-blocks/chisel/f2_decimator.git
+	url = git@github.com:Chisel-blocks/f2_decimator.git
 [submodule "prog_delay"]
 	path = prog_delay
 	url = git@github.com:Chisel-blocks/prog_delay.git
