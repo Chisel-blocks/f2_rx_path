@@ -6,4 +6,4 @@
 	url = git@github.com:Chisel-blocks/prog_delay.git
 [submodule "clkmux"]
 	path = clkmux
-	url = git@github.com/Chisel-blocks/clkmux.git
+	url = git@github.com:Chisel-blocks/clkmux.git
