@@ -61,7 +61,7 @@ resolvers += "Sonatype Releases" at "https://oss.sonatype.org/content/repositori
 // Provide a managed dependency on X if -DXVersion="" is supplied on the command line.
 // [TODO] is simpler clearer?
 val defaultVersions = Map(
-  "chisel3" -> "3.1.6",
+  "chisel3" -> "3.1.7",
   "chisel-iotesters" -> "1.2.5",
   "dsptools" -> "1.1.4"
   )
@@ -90,9 +90,9 @@ libraryDependencies  ++= Seq(
 
 libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
 libraryDependencies += "berkeley" %% "rocketchip" % "1.2"
-libraryDependencies += "edu.berkeley.cs" %% "f2_decimator" % gitSubmoduleHashSnapshotVersion("f2_decimator")
-libraryDependencies += "edu.berkeley.cs" %% "clkmux" % gitSubmoduleHashSnapshotVersion("clkmux")
-libraryDependencies += "edu.berkeley.cs" %% "prog_delay" % gitSubmoduleHashSnapshotVersion("prog_delay")
+libraryDependencies += "Chisel-blocks" %% "f2_decimator" % gitSubmoduleHashSnapshotVersion("f2_decimator")
+libraryDependencies += "Chisel-blocks" %% "clkmux" % gitSubmoduleHashSnapshotVersion("clkmux")
+libraryDependencies += "Chisel-blocks" %% "prog_delay" % gitSubmoduleHashSnapshotVersion("prog_delay")
 //libraryDependencies += "edu.berkeley.eecs" %% "ofdm" % "0.1"
 //libraryDependencies += "edu.berkeley.cs" %% "eagle_serdes" % "0.0-SNAPSHOT"
 
