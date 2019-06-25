@@ -93,7 +93,7 @@ class f2_rx_path (
     io.decimator_controls<>decimator.controls
     io.decimator_clocks<>decimator.clocks
     val adcfifodepth=16
-    val adcfifo = Module (new AsyncQueue(adcproto,depth=adcfifodepth)).io
+    val adcfifo = Module (new AsyncQueue(adcproto,AsyncQueueParams(depth=adcfifodepth))).io
     adcfifo.enq_clock:=io.adc_clock
     adcfifo.enq.valid:=true.B
     adcfifo.enq_reset:=io.adc_ioctrl.reset_adcfifo

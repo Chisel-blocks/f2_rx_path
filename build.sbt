@@ -89,7 +89,7 @@ libraryDependencies  ++= Seq(
 // TODO-how to figure out what version is the current and the best?
 
 libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
-libraryDependencies += "berkeley" %% "rocketchip" % "1.2"
+libraryDependencies += "edu.berkeley.cs" %% "rocketchip" % "1.2-SNAPSHOT"
 libraryDependencies += "Chisel-blocks" %% "f2_decimator" % gitSubmoduleHashSnapshotVersion("f2_decimator")
 libraryDependencies += "Chisel-blocks" %% "clkmux" % gitSubmoduleHashSnapshotVersion("clkmux")
 libraryDependencies += "Chisel-blocks" %% "prog_delay" % gitSubmoduleHashSnapshotVersion("prog_delay")
