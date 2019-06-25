@@ -2,6 +2,7 @@
 #Init submodules in this dir, if any
 DIR="$( cd "$( dirname $0 )" && pwd )"
 git submodule update --init
+git submodule sync
 
 #Rocket chip is huge. make it global
 #Publish local the ones you need
