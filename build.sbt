@@ -57,13 +57,14 @@ resolvers ++= Seq(
 )
 // [TODO]: Is this redundant?
 resolvers += "Sonatype Releases" at "https://oss.sonatype.org/content/repositories/releases/"
+resolvers += "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 // Provide a managed dependency on X if -DXVersion="" is supplied on the command line.
 // [TODO] is simpler clearer?
 val defaultVersions = Map(
   "chisel3" -> "3.1.7",
   "chisel-iotesters" -> "1.2.5",
-  "dsptools" -> "1.1.4"
+  "dsptools" -> "1.1.8"
   )
 
 libraryDependencies ++= (Seq("chisel3","chisel-iotesters","dsptools").map {
@@ -88,13 +89,10 @@ libraryDependencies  ++= Seq(
 // Some common deps in BWRC projects, select if needed
 // TODO-how to figure out what version is the current and the best?
 
-libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
-libraryDependencies += "edu.berkeley.cs" %% "rocketchip" % "1.2-SNAPSHOT"
+libraryDependencies += "edu.berkeley.cs" %% "rocketchip" % "1.2-031419-SNAPSHOT"
 libraryDependencies += "Chisel-blocks" %% "f2_decimator" % gitSubmoduleHashSnapshotVersion("f2_decimator")
 libraryDependencies += "Chisel-blocks" %% "clkmux" % gitSubmoduleHashSnapshotVersion("clkmux")
 libraryDependencies += "Chisel-blocks" %% "prog_delay" % gitSubmoduleHashSnapshotVersion("prog_delay")
-//libraryDependencies += "edu.berkeley.eecs" %% "ofdm" % "0.1"
-//libraryDependencies += "edu.berkeley.cs" %% "eagle_serdes" % "0.0-SNAPSHOT"
 
 // Put your git-version controlled snapshots here
 //libraryDependencies += "edu.berkeley.cs" %% "hbwif" % gitSubmoduleHashSnapshotVersion("hbwif")
